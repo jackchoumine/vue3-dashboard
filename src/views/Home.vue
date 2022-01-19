@@ -5,6 +5,11 @@
     <p>用户名信息：{{ sharedData.user }}</p>
     <hr />
     <!-- <StencilRender :personArray="[{ name: 'stencil------' }]" /> -->
+    <a href="https://jackchoumine.github.io/react-container/">集成后的页面</a><br />
+    <a href="https://jackchoumine.github.io/react-marketing/">marketing-react 微应用</a><br />
+    <a href="https://jackchoumine.github.io/vue3-dashboard/">vue3-dashboard 微应用</a><br />
+    <a href="https://jackchoumine.github.io/react-auth/">react-auth 微应用]</a><br />
+    <hr />
     <RouterLink to="/upload">upload page</RouterLink>
   </div>
 </template>
