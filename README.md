@@ -25,7 +25,7 @@ const isProd = process.env.NODE_ENV === 'production'
  "build": "webpack --config config/webpack.prod.js --progress",
  "postbuild": "cp dist/index.html dist/404.html",
  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
+ "deploy": "gh-pages -d dist"
 ```
 
 其他解决办法：
