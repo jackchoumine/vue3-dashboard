@@ -6,7 +6,10 @@ import { createWebHistory, createMemoryHistory } from 'vue-router'
 
 function mount(el, { isMemoryHistory, basePath, currentPath, onNavigate, sharedData = {} }) {
   const app = createApp(App, { basePath, currentPath, isMemoryHistory, onNavigate, sharedData })
-  const history = isMemoryHistory ? createMemoryHistory(basePath) : createWebHistory()
+  const isProd = process.env.NODE_ENV === 'production'
+  const history = isMemoryHistory
+    ? createMemoryHistory(basePath)
+    : createWebHistory(isProd ? '/vue3-dashboard' : undefined)
 
   setupRouter(app, { history })
   // history.push('/upload')
